@@ -138,17 +138,21 @@ while place_order:
                  
 
                 # 4. Check if the menu selection is in the menu items
-                if int(menu_selection) in menu_items.keys():
+                if int(menu_selection) in menu_category.keys():
 
                      # Store the item name as a variable
                     item_name = menu_items[int(menu_selection)]
 
                     # Ask the customer for the quantity of the menu item
-                    input('How many of these items would you like?')
+                    item_quantity = input('How many of these items would you like?')
 
                     # Check if the quantity is a number, default to 1 if not
-                    
-
+                    if item_quantity.isdigit():
+                        print(f"you have sellected {item_quantity} {item_name}'s")
+                    else:
+                        item_quantity = 1,
+                        print(f"your quantity was not valid and has been defaulted to 1")
+                
                     # Add the item name, price, and quantity to the order list
 
 
@@ -156,7 +160,11 @@ while place_order:
 
 
                 # Tell the customer they didn't select a menu option
+                else:
+                    print(f"{menu_selection} was not valid.")
 
+            else:
+                printprint(f"{menu_selection} was not valid.")
         else:
             # Tell the customer they didn't select a menu option
             print(f"{menu_category} was not a menu option.")
