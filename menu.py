@@ -140,7 +140,7 @@ while place_order:
                  menu_selection= int(menu_selection)
 
                 # 4. Check if the menu selection is in the menu items
-            if menu_selection in menu_items.keys():
+                if menu_selection in menu_items.keys():
                      # Store the item name as a variable
                     item_name = menu_items[menu_selection]["Item name"]
                     item_price = menu_items[menu_selection]["price"]
@@ -153,12 +153,12 @@ while place_order:
                         print(f"you have sellected {item_quantity} {item_name}'s")
                 
                     # Add the item name, price, and quantity to the order list
-                    customers_order ={
+                    order ={
                     "item name": item_name ,
                     "price": item_price,
                     "Quantity": item_quantity
                     }
-                    order_list.append(customers_order)
+                    order_list.append(order)
 
                      # Tell the customer that their input isn't valid
                     else:
@@ -166,8 +166,7 @@ while place_order:
                         print(f"your quantity was not valid and has been defaulted to 1")
 
                 # Tell the customer they didn't select a menu option
-                else:
-                    
+                else: 
                     print(f" The option you selected was not valid.")
 
             else:
@@ -184,7 +183,7 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-
+        if keep_ordering
                 # Keep ordering
 
                 # Exit the keep ordering question loop
