@@ -154,6 +154,8 @@ while place_order:
                         }
                         order_list.append(order)
 
+                        print(f"{item_quantity} {item_name}(s) added to your order.")
+
                      # Tell the customer that their input isn't valid
                     else:
                         item_quantity = 1
@@ -177,43 +179,47 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-        if keep_ordering
+        if keep_ordering == "Y" or keep_ordering == "Yes":
+            break
                 # Keep ordering
 
                 # Exit the keep ordering question loop
-
+        
                 # Complete the order
 
                 # Since the customer decided to stop ordering, thank them for
                 # their order
-
+        elif keep_ordering == "N" or keep_ordering == "No":
+            print('Thank you for your order!')
+        break
                 # Exit the keep ordering question loop
 
 
                 # Tell the customer to try again
+        else:
+            print('Invalid input please select Y or N')
+
+# # Print out the customer's order
+# print("This is what we are preparing for you.\n")
+
+# # Uncomment the following line to check the structure of the order
+# #print(order)
+
+# print("Item name                 | Price  | Quantity")
+# print("--------------------------|--------|----------")
+
+# # 6. Loop through the items in the customer's order
+
+#     # 7. Store the dictionary items as variables
 
 
-# Print out the customer's order
-print("This is what we are preparing for you.\n")
-
-# Uncomment the following line to check the structure of the order
-#print(order)
-
-print("Item name                 | Price  | Quantity")
-print("--------------------------|--------|----------")
-
-# 6. Loop through the items in the customer's order
-
-    # 7. Store the dictionary items as variables
+#     # 8. Calculate the number of spaces for formatted printing
 
 
-    # 8. Calculate the number of spaces for formatted printing
+#     # 9. Create space strings
 
 
-    # 9. Create space strings
-
-
-    # 10. Print the item name, price, and quantity
+#     # 10. Print the item name, price, and quantity
 
 
 # 11. Calculate the cost of the order using list comprehension
