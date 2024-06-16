@@ -180,7 +180,7 @@ while place_order:
 
         # 5. Check the customer's input
         if keep_ordering == "Y" or keep_ordering == "Yes":
-            break
+            break 
                 # Keep ordering
 
                 # Exit the keep ordering question loop
@@ -191,35 +191,38 @@ while place_order:
                 # their order
         elif keep_ordering == "N" or keep_ordering == "No":
             print('Thank you for your order!')
-        break
-                # Exit the keep ordering question loop
+            break        
+               # Exit the keep ordering question loop
 
 
                 # Tell the customer to try again
         else:
             print('Invalid input please select Y or N')
+    
 
-# # Print out the customer's order
-# print("This is what we are preparing for you.\n")
+        
 
-# # Uncomment the following line to check the structure of the order
-# #print(order)
+# Print out the customer's order
+print("This is what we are preparing for you.\n")
 
-# print("Item name                 | Price  | Quantity")
-# print("--------------------------|--------|----------")
+# Uncomment the following line to check the structure of the order
+#print(order)
 
-# # 6. Loop through the items in the customer's order
+print("Item name                 | Price  | Quantity")
+print("--------------------------|--------|----------")
 
-#     # 7. Store the dictionary items as variables
+# 6. Loop through the items in the customer's order
 
-
-#     # 8. Calculate the number of spaces for formatted printing
-
-
-#     # 9. Create space strings
+    # 7. Store the dictionary items as variables
 
 
-#     # 10. Print the item name, price, and quantity
+    # 8. Calculate the number of spaces for formatted printing
+
+
+    # 9. Create space strings
+
+
+    # 10. Print the item name, price, and quantity
 
 
 # 11. Calculate the cost of the order using list comprehension
