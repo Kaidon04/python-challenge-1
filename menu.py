@@ -52,13 +52,7 @@ menu = {
 
 # 1. Set up order list. Order list will store a list of dictionaries for
 # menu item name, item price, and quantity ordered
-order_list = [
-    {
-       "item name": "string" ,
-       "price": float,
-       "Quantity": int
-    }
-]
+order_list = []
 
 # Launch the store and present a greeting to the customer
 print("Welcome to the variety food truck.")
@@ -137,13 +131,13 @@ while place_order:
             # 3. Check if the customer typed a number
             if menu_selection.isdigit():
                 # Convert the menu selection to an integer
-                 menu_selection= int(menu_selection)
+                menu_selection= int(menu_selection)
 
                 # 4. Check if the menu selection is in the menu items
                 if menu_selection in menu_items.keys():
                      # Store the item name as a variable
                     item_name = menu_items[menu_selection]["Item name"]
-                    item_price = menu_items[menu_selection]["price"]
+                    item_price = menu_items[menu_selection]["Price"]
                     # Ask the customer for the quantity of the menu item
                     item_quantity = input('How many of these items would you like?')
 
@@ -153,12 +147,12 @@ while place_order:
                         print(f"you have sellected {item_quantity} {item_name}'s")
                 
                     # Add the item name, price, and quantity to the order list
-                    order ={
-                    "item name": item_name ,
-                    "price": item_price,
-                    "Quantity": item_quantity
-                    }
-                    order_list.append(order)
+                        order ={
+                        "Item name": item_name,
+                        "Price": item_price,
+                        "Quantity": item_quantity
+                        }
+                        order_list.append(order)
 
                      # Tell the customer that their input isn't valid
                     else:
