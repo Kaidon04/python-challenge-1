@@ -180,6 +180,7 @@ while place_order:
 
         # 5. Check the customer's input
         if keep_ordering == "Y" or keep_ordering == "Yes":
+            place_order = True
             break 
                 # Keep ordering
 
@@ -191,6 +192,7 @@ while place_order:
                 # their order
         elif keep_ordering == "N" or keep_ordering == "No":
             print('Thank you for your order!')
+            place_order = False 
             break        
                # Exit the keep ordering question loop
 
@@ -206,7 +208,7 @@ while place_order:
 print("This is what we are preparing for you.\n")
 
 # Uncomment the following line to check the structure of the order
-#print(order)
+print(order)
 
 print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
