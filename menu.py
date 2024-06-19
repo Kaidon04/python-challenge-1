@@ -145,7 +145,9 @@ while place_order:
                     if item_quantity.isdigit():
                         item_quantity = int(item_quantity)
                         print(f"you have sellected {item_quantity} {item_name}'s")
-                
+                    else:
+                        item_quantity = 1
+                        print(f"your quantity was not valid and has been defaulted to 1")
                     # Add the item name, price, and quantity to the order list
                         order ={
                         "Item name": item_name,
@@ -157,10 +159,7 @@ while place_order:
                         print(f"{item_quantity} {item_name}(s) added to your order.")
 
                      # Tell the customer that their input isn't valid
-                    else:
-                        item_quantity = 1
-                        print(f"your quantity was not valid and has been defaulted to 1")
-
+                    
                 # Tell the customer they didn't select a menu option
                 else: 
                     print(f" The option you selected was not valid.")
