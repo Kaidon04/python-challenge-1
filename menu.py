@@ -149,14 +149,14 @@ while place_order:
                         item_quantity = 1
                         print(f"your quantity was not valid and has been defaulted to 1")
                     # Add the item name, price, and quantity to the order list
-                        order ={
-                        "Item name": item_name,
-                        "Price": item_price,
-                        "Quantity": item_quantity
-                        }
-                        order_list.append(order)
+                    order ={
+                    "Item name": item_name,
+                    "Price": item_price,
+                    "Quantity": item_quantity
+                    }
+                    order_list.append(order)
 
-                        print(f"{item_quantity} {item_name}(s) added to your order.")
+                    print(f"{item_quantity} {item_name}(s) added to your order.")
 
                      # Tell the customer that their input isn't valid
                     
@@ -178,9 +178,11 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-        if keep_ordering == "Y" or keep_ordering == "Yes":
-            place_order = True
-            break 
+        match keep_ordering.lower():
+            case 'y':
+                place_order = True
+                break
+
                 # Keep ordering
 
                 # Exit the keep ordering question loop
@@ -189,16 +191,15 @@ while place_order:
 
                 # Since the customer decided to stop ordering, thank them for
                 # their order
-        elif keep_ordering == "N" or keep_ordering == "No":
-            print('Thank you for your order!')
-            place_order = False 
-            break        
+            case  'n':
+                place_order = False
+                break
                # Exit the keep ordering question loop
 
 
                 # Tell the customer to try again
-        else:
-            print('Invalid input please select Y or N')
+            case _:
+                print('Invalid input please select Y or N to place another order or not.')
     
 
         
